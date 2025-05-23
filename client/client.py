@@ -70,7 +70,7 @@ class Client:
         return self.__last_name
 
     @property
-    def email(self) -> str:
+    def email_address(self) -> str:
         """
         Accessor for the email_address attribute.
         Returns: str - The Email address of the Client
