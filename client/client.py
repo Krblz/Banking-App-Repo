@@ -23,7 +23,7 @@ class Client:
         raises:
             ValueError: If any of the arguments are valid.
         """
-        if isinstance(client_number: int):
+        if isinstance(client_number, int):
             self.__client_number = client_number
         else:
             raise ValueError("Client Number must be numeric")
