@@ -70,7 +70,7 @@ class TestClient(unittest.TestCase):
         self.assertEqual("susanclark@pixell.com", self.client.email_address)
 
     def test_str(self):
-        # Arrange done by setup above
+        # Arrange done by setup above...
         expected = "Clark, Susan [1010] - susanclark@pixell.com"
 
         # Act and Assert
