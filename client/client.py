@@ -21,7 +21,7 @@ class Client:
             email_address (str): A string value the client's email address.
 
         raises:
-            ValueError: If any of the arguments are valid.
+            ValueError: If any of the arguments are invalid.
         """
         if isinstance(client_number, int):
             self.__client_number = client_number
