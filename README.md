@@ -8,4 +8,8 @@ Keith Robles
 Assignment 1: Classes, Encapsulation and Unit Test Planning
 
 ## Encapsulation
-[use this section to explain how Encapsulation was achieved in the BankAccount class.]
+Encapsulation is achieved in BankAccount Class by inputting values into an instance
+of the BankAccount Class. The BankAccount Class also correctly checks for Errors and 
+messages appropriate statements regarding the Errors.
+BankAccount Class also has methods like Withdraw, Deposit, and Balance that provides
+access to the values from inside the Instance.
