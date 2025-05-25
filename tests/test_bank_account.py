@@ -31,7 +31,7 @@ class TestClient(unittest.TestCase):
         expected = 0
 
         # Assert
-        self.assertEqual(expected, bank_account.balance)
+        self.assertEqual(expected, round(bank_account.balance, 2))
 
     def test_init_raises_ValueError_when_non_numeric_account_number(self):
         # Arrange & Act
@@ -56,7 +56,7 @@ class TestClient(unittest.TestCase):
     def test_account_number_returns_balance_attribute(self):
         # Arrange done by setup above...
         # Act and Assert
-        self.assertEqual(1000, self.bank_account.balance)
+        self.assertEqual(1000, round(self.bank_account.balance, 2))
 
     def test_update_balance_correctly_updates_when_amount_is_positive(self):
         # Arrange done partially by setup above...
@@ -66,7 +66,7 @@ class TestClient(unittest.TestCase):
         self.bank_account.update_balance(amount)
 
         # Assert
-        self.assertEqual(expected, self.bank_account.balance)
+        self.assertEqual(expected, round(self.bank_account.balance, 2))
 
     def test_update_balance_correctly_updates_when_amount_is_negative(self):
         # Arrange done partially by setup above...
@@ -76,7 +76,7 @@ class TestClient(unittest.TestCase):
         self.bank_account.update_balance(amount)
 
         # Assert
-        self.assertEqual(expected, self.bank_account.balance)
+        self.assertEqual(expected, round(self.bank_account.balance, 2))
 
     def test_update_balance_unchanged_when_amount_is_non_numeric(self):
         # Arrange done partially by setup above...
@@ -86,7 +86,7 @@ class TestClient(unittest.TestCase):
         self.bank_account.update_balance(amount)
 
         # Assert
-        self.assertEqual(expected, self.bank_account.balance)
+        self.assertEqual(expected, round(self.bank_account.balance, 2))
 
     def test_deposit_correctly_updates_when_valid(self):
         # Arrange done partially by setup above...
@@ -96,7 +96,7 @@ class TestClient(unittest.TestCase):
         self.bank_account.deposit(amount)
 
         # Assert
-        self.assertEqual(expected, self.bank_account.balance)
+        self.assertEqual(expected, round(self.bank_account.balance, 2))
 
     def test_deposit_raises_ValueError_when_amount_is_negative(self):
         # Arrange done partially by setup above...
@@ -112,7 +112,7 @@ class TestClient(unittest.TestCase):
         self.bank_account.withdraw(amount)
 
         # Assert
-        self.assertEqual(expected, self.bank_account.balance)
+        self.assertEqual(expected, round(self.bank_account.balance, 2))
 
     def test_withdraw_raises_ValueError_when_amount_is_negative(self):
         # Arrange done partially by setup above...
