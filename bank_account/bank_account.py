@@ -31,8 +31,8 @@ class BankAccount:
         else:
             raise ValueError("Client Number must be numeric")
     
-        if isinstance(balance, float):
-            self.__balance = balance
+        if isinstance(balance, (float, int)):
+            self.__balance = float(balance)
         else:
             self.__balance = 0
 
@@ -107,7 +107,7 @@ class BankAccount:
         if amount <= 0:
             raise ValueError(f"Withdraw amount: {amount} must be positive")
         if amount > self.__balance:
-            raise ValueError(f"Withdraw amount: {formatted amount} must not "
+            raise ValueError(f"Withdraw amount: {amount} must not "
                              f"exceed the account balance: {self.__balance}.")        
         # Amount is multiplied by negative 1 to reduce Balance         
         self.update_balance(amount * -1)    
@@ -117,5 +117,5 @@ class BankAccount:
         Returns a string representation of the Bank Account instance.
         Returns: str - The Bank Account instance as a formatted string.
         """
-        return (f"Account Number: {self.__account_number}"
-                f"Balance: ${self.__balance:,.2f}"
+        return (f"Account Number: {self.__account_number} "
+                f"Balance: ${self.__balance:,.2f}")
