@@ -5,12 +5,12 @@ This project will be developed over the course of several assignments.  Each ass
 Keith Robles
 
 ## Assignment
-Assignment 1: Classes, Encapsulation and Unit Test Planning
-Assignment 2: Abstraction, Inheritance and Polymorphism
+Assignment 1: Classes, Encapsulation and Unit Test Planning  
+Assignment 2: Abstraction, Inheritance and Polymorphism  
 
 ## Encapsulation
 Encapsulation is achieved in BankAccount Class by inputting values into an instance
 of the BankAccount Class. The BankAccount Class also correctly checks for Errors and 
-messages appropriate statements regarding the Errors.
+messages appropriate statements regarding the Errors.  
 BankAccount Class also has methods like Withdraw, Deposit, and Balance that provides
 access to the values from inside the Instance.
