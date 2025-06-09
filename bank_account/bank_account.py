@@ -3,11 +3,18 @@
 __author__ = "Keith Robles"
 __version__ = "1.0"
 
-class BankAccount:
+from datetime import date
+from abc import ABC, abstractmethod
+
+class BankAccount(ABC):
     """
     Bank Account Class, represents the Client's Bank Account
     """
-    def __init__(self, account_number: int, client_number: int, balance: float):
+
+    BASE_SERVICE_CHARGE = 0.5 # Float Constant
+
+    def __init__(self, account_number: int, client_number: int, 
+                 balance: float, date_created: date):
         """
         Initializes a Bank Account object based on received arguments (if valid)
         
@@ -15,7 +22,8 @@ class BankAccount:
             account_number (int): An integer value representing the bank account number.
             client_number (int): An integer value representing the client number 
                                 representing the account holder.
-            balance(float): A float value representing the current balance of the bank account.
+            balance (float): A float value representing the current balance of the bank account.
+            date_created (date): A date value representing the date of bank account creation
         
         raises:
             ValueError: If any of the arguments are invalid.
@@ -35,6 +43,12 @@ class BankAccount:
             self.__balance = float(balance)
         else:
             self.__balance = 0
+
+        if isinstance(date_created, (date)):
+            self._date_created = date_created
+        else:
+            self._date_created = date.today()
+
 
     @property
     def account_number(self) -> int:
@@ -119,3 +133,7 @@ class BankAccount:
         """
         return (f"Account Number: {self.__account_number} "
                 f"Balance: ${self.__balance:,.2f}")
+    
+    @abstractmethod
+    def get_service_charges(self) -> float:
+        pass
