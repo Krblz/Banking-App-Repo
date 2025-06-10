@@ -5,7 +5,6 @@ __version__ = "1.0"
 
 from datetime import date
 from bank_account.bank_account import BankAccount
-from abc import ABC, abstractmethod
 
 class ChequingAccount(BankAccount):
     """
@@ -42,11 +41,13 @@ class ChequingAccount(BankAccount):
                 f"Account Type: Chequing")
 
     def get_service_charges(self) -> float:
-        if (self.__balance >= self.__overdraft_limit):
+        balance = self._BankAccount__balance # Just to make formatting easier
+        
+        if (balance >= self.__overdraft_limit):
             service_charge = self.BASE_SERVICE_CHARGE
         else:
             service_charge = (self.BASE_SERVICE_CHARGE +
-                            (self.__overdraft_limit - self.__balance)
+                            (self.__overdraft_limit - balance)
                              * self.__overdraft_rate)
         return service_charge
 

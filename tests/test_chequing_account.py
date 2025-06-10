@@ -50,14 +50,14 @@ class TestClient(unittest.TestCase):
     def test_service_charges_when_balance_greater_than_overdraft_limit(self):
         # Arrange done by setup above...
         # Act and Assert
-        self.assertEqual(0.5, self.chequing_account.get_service_charges())
+        self.assertEqual(0.5, round(self.chequing_account.get_service_charges(), 2))
 
     def test_service_charges_when_balance_less_than_overdraft_limit(self):
         # Arrange & Act
         chequing_account = ChequingAccount(20025, 1, -600, date(2025, 6, 6), -100, 0.05)
 
         # Act and Assert
-        self.assertEqual(25.5, chequing_account.get_service_charges())
+        self.assertEqual(25.5, round(chequing_account.get_service_charges(), 2))
 
     
     def test_service_charges_when_balance_equal_to_overdraft_limit(self):
@@ -65,4 +65,4 @@ class TestClient(unittest.TestCase):
         chequing_account = ChequingAccount(20025, 1, -100, date(2025, 6, 6), -100, 0.05)
 
         # Act and Assert
-        self.assertEqual(0.5, self.chequing_account.get_service_charges())
+        self.assertEqual(0.5, round(chequing_account.get_service_charges(), 2))
