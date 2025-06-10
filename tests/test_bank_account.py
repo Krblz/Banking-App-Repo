@@ -7,18 +7,18 @@ the following command:
 """
 
 import unittest
+from datetime import date
 from bank_account.bank_account import BankAccount
 
-class TestClient(unittest.TestCase):
-    
+class TestClient(unittest.TestCase):    
     def setUp(self):
         # Setup runs AUTOMATICALLY before each test method and
         # provides initial values for the class attributes.
-        self.bank_account = BankAccount(20025, 1, 1000)
+        self.bank_account = MockAccount(20025, 1, 1000, date(2025, 6, 6))
 
     def test_init_valid(self):
         # Arrange & Act
-        bank_account = BankAccount(20025, 1, 1000)
+        bank_account = MockAccount(20025, 1, 1000, date(2025, 6, 6))
 
         # Assert (uses name mangling to obtain private attribute)
         self.assertEqual(20025, bank_account.account_number)
@@ -27,7 +27,7 @@ class TestClient(unittest.TestCase):
 
     def test_init_balance_set_to_0_when_non_numeric(self):
         # Arrange & Act
-        bank_account = BankAccount(20025, 1, "1 million")
+        bank_account = MockAccount(20025, 1, "1 million", date(2025, 6, 6))
         expected = 0
 
         # Assert
@@ -36,12 +36,12 @@ class TestClient(unittest.TestCase):
     def test_init_raises_ValueError_when_non_numeric_account_number(self):
         # Arrange & Act
         with self.assertRaises(ValueError):
-            bank_account = BankAccount("Ten Hundred", 1, 1000)
+            bank_account = MockAccount("Ten Hundred", 1, 1000, date(2025, 6, 6))
 
     def test_init_raises_ValueError_when_non_numeric_client_number(self):
         # Arrange & Act
         with self.assertRaises(ValueError):
-            bank_account = BankAccount(20025, "A01", 1000)
+            bank_account = MockAccount(20025, "A01", 1000, date(2025, 6, 6))
 
     def test_account_number_returns_account_attribute(self):
         # Arrange done by setup above...
@@ -132,3 +132,10 @@ class TestClient(unittest.TestCase):
 
         # Act and Assert
         self.assertEqual(expected, str(self.bank_account))
+
+
+# Mock Account for Unit Testing, Completely independent of other Subclasses
+# Allows for Testing without instantiating or using other Subclasses
+class MockAccount(BankAccount):
+    def get_service_charges(self):
+        return 0.5
