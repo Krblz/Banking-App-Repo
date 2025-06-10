@@ -135,7 +135,7 @@ class TestClient(unittest.TestCase):
 
 
 # Mock Account for Unit Testing, Completely independent of other Subclasses
-# Allows for Testing without instantiating or using other Subclasses
+# Allows for Testing without instantiating or using other Subclasses 
 class MockAccount(BankAccount):
     def get_service_charges(self):
         return 0.5

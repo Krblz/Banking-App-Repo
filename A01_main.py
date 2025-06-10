@@ -8,6 +8,7 @@ __credits__ = "Keith Robles"
 
 from bank_account.bank_account import BankAccount
 from client.client import Client
+from datetime import date
 
 def main():
     """Test the functionality of the methods encapsulated 
@@ -21,7 +22,6 @@ def main():
     # Use your own unique valid values for the inputs to the class.
     client = Client(1, "Carlotta", "Montelli", "carlottaMontelli@ragunna.com")
 
-
     # 2. Declare a BankAccount object with an initial value of None.
     bank_account = None
 
@@ -32,7 +32,7 @@ def main():
     # BankAccount's client_number. 
     # Use a floating point value for the balance. 
 
-    bank_account = BankAccount(20025, 1, 1000.00)
+    bank_account = BonkAccount(20025, 1, 1000.00,  date(2025, 5, 5))
 
     # 4. Code a statement which creates an instance of the BankAccount class.
     # Use any integer value for the BankAccount number.
@@ -40,7 +40,7 @@ def main():
     # BankAccount's client_number. 
     # Use an INVALID value (non-float) for the balance. 
     try:
-        invalid_bank_account = BankAccount(525025, 1, "Ten Thousand")
+        invalid_bank_account = BonkAccount(525025, 1, "Ten Thousand", date(2025, 1, 2))
     except ValueError as e:
         print(e)
 
@@ -97,6 +97,10 @@ def main():
 
     print(str(bank_account))    
 
+# Mock Account to ensure testing of Bank Account Main works in isolation
+class BonkAccount(BankAccount):
+    def get_service_charges(self):
+        return 0.5
 
 if __name__ == "__main__":
     main()
