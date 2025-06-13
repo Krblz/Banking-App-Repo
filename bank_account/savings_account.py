@@ -33,7 +33,7 @@ class SavingsAccount(BankAccount):
 
     def __str__(self) -> str:
         return (f"{super().__str__()} \n"
-                f"Management Fee: %{self.__minimum_balance:,.2f} "
+                f"Minimum Balance: ${self.__minimum_balance:,.2f} "
                 f"Account Type: Savings")
 
     def get_service_charges(self) -> float:
