@@ -31,10 +31,10 @@ class InvestmentAccount(BankAccount):
         else:
             self.__management_fee = 2.55
 
-    def __str__(self):
+    def __str__(self) -> str:
         return (f"{super().__str__()} \n"
                 f"Date Created: {self._date_created} "
-                f"Management Fee: {self.__management_fee:,.2f} "
+                f"Management Fee: ${self.__management_fee:,.2f} "
                 f"Account Type: Investment")
 
     def get_service_charges(self) -> float:      

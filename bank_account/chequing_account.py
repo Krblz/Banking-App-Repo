@@ -34,7 +34,7 @@ class ChequingAccount(BankAccount):
         else:
             self.__overdraft_rate = 0.05
 
-    def __str__(self):
+    def __str__(self) -> str:
         return (f"{super().__str__()} \n"
                 f"Overdraft Limit: ${self.__overdraft_limit:,.2f} "
                 f"Overdraft Rate: {self.__overdraft_rate}% "
@@ -50,4 +50,5 @@ class ChequingAccount(BankAccount):
                             (self.__overdraft_limit - balance)
                              * self.__overdraft_rate)
         return service_charge
-
+    
+    

@@ -11,7 +11,7 @@ from datetime import date, timedelta
 from bank_account.investment_account import InvestmentAccount
 
 class TestClient(unittest.TestCase):
-    
+
     def setUp(self):
         # Setup runs AUTOMATICALLY before each test method and
         # provides initial values for the class attributes.
@@ -74,7 +74,7 @@ class TestClient(unittest.TestCase):
         # Arrange done by setup above...
         expected = ("Account Number: 20025 Balance: $0.00 \n"
                     "Date Created: 2012-06-06 " 
-                    "Management Fee: 2.00 "
+                    "Management Fee: $2.00 "
                     "Account Type: Investment")
 
         # Act and Assert
@@ -88,11 +88,10 @@ class TestClient(unittest.TestCase):
                                                 within_ten_years_ago, 2.00)
         expected = ("Account Number: 20025 Balance: $0.00 \n"
                     f"Date Created: {within_ten_years_ago} " 
-                    "Management Fee: 2.00 "
+                    "Management Fee: $2.00 "
                     "Account Type: Investment")
 
         # Act and Assert
-        print(str(investment_account))
         self.assertEqual(expected, str(investment_account))
 
     
