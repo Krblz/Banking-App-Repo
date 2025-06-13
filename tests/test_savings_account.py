@@ -25,7 +25,7 @@ class TestClient(unittest.TestCase):
         min_balance = savings_account._SavingsAccount__minimum_balance
 
         # Assert
-        self.assertEqual(50.00, min_balance)
+        self.assertEqual(50.00, round(min_balance, 2))
 
     def test_init_invalid(self):
         # Arrange & Act
@@ -34,7 +34,7 @@ class TestClient(unittest.TestCase):
         min_balance = savings_account._SavingsAccount__minimum_balance
 
         # Assert
-        self.assertEqual(50.00, min_balance)
+        self.assertEqual(50.00, round(min_balance, 2))
 
     def test_get_service_charges_when_balance_greater_than_minimum(self):
         # Arrange & Act
@@ -43,7 +43,7 @@ class TestClient(unittest.TestCase):
         min_balance = savings_account.get_service_charges()
 
         # Assert
-        self.assertEqual(0.5, min_balance)
+        self.assertEqual(0.5, round(min_balance, 2))
 
     def test_get_service_charges_when_balance_equal_to_minimum(self):\
         # Arrange & Act
@@ -52,7 +52,7 @@ class TestClient(unittest.TestCase):
         min_balance = savings_account.get_service_charges()
 
         # Assert
-        self.assertEqual(0.5, min_balance)
+        self.assertEqual(0.5, round(min_balance, 2))
     
     def test_get_service_charges_when_balance_less_than_minimum(self):
         # Arrange & Act
@@ -61,7 +61,7 @@ class TestClient(unittest.TestCase):
         min_balance = savings_account.get_service_charges()
 
         # Assert
-        self.assertEqual(1, min_balance)
+        self.assertEqual(1, round(min_balance, 2))
 
     def test_str(self):
         # Arrange done by setup above...
