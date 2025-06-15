@@ -1,7 +1,7 @@
 """"This Module defines the Investment Account class"""
 
 __author__ = "Keith Robles"
-__version__ = "1.0"
+__version__ = "1.0.0"
 
 from datetime import date, timedelta
 from bank_account.bank_account import BankAccount

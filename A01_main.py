@@ -3,7 +3,7 @@ Description: A client program written to verify correctness of
 the BankAccount and Client classes.
 """
 __author__ = "ACE Faculty"
-__version__ = "1.0.0"
+__version__ = "1.1.1"
 __credits__ = "Keith Robles"
 
 from bank_account.bank_account import BankAccount

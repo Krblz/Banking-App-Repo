@@ -1,7 +1,7 @@
 """"This Module defines the Bank Account class"""
 
 __author__ = "Keith Robles"
-__version__ = "1.0"
+__version__ = "1.1.1"
 
 from datetime import date
 from abc import ABC, abstractmethod

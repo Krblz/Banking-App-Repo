@@ -3,7 +3,7 @@ Description: A client program written to verify correctness of
 the BankAccount sub classes.
 """
 __author__ = "ACE Faculty"
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __credits__ = "Keith Robles"
 
 # 1.  Import all BankAccount types using the bank_account package
