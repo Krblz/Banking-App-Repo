@@ -7,6 +7,7 @@ Keith Robles
 ## Assignment
 Assignment 1: Classes, Encapsulation and Unit Test Planning  
 Assignment 2: Abstraction, Inheritance, and Polymorphism  
+Assignment 3: Design Patterns  
 
 ## Encapsulation
 Encapsulation is achieved in BankAccount Class by inputting values into an instance
