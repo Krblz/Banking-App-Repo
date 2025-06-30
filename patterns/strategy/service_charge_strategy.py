@@ -1,4 +1,4 @@
-"""This module defines the Service Change Strategy class."""
+"""This module defines the Service Charge Strategy class."""
 
 __author__ = "Keith Robles"
 __version__ = "Keith Robles"
@@ -6,7 +6,7 @@ __version__ = "Keith Robles"
 from bank_account import *
 from abc import ABC, abstractmethod
 
-class ServiceChangeStrategy(ABC):
+class ServiceChargeStrategy(ABC):
     """
     Abstract Class for Payment Strategies.
     Methods:
