@@ -1,7 +1,7 @@
 """This module defines the Service Charge Strategy class."""
 
 __author__ = "Keith Robles"
-__version__ = "Keith Robles"
+__version__ = "1.0.0"
 
 from bank_account import *
 from abc import ABC, abstractmethod
@@ -19,7 +19,7 @@ class ServiceChargeStrategy(ABC):
     BASE_SERVICE_CHARGE = 0.5
 
     @abstractmethod
-    def calculate_service_charges(account: BankAccount) -> float:
+    def calculate_service_charges(self, account: BankAccount) -> float:
         """
         Abstract calculate_service_charges accessor
         returns:

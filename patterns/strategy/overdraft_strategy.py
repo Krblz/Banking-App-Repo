@@ -1,7 +1,7 @@
 """This module defines the Overdraft Strategy class."""
 
 __author__ = "Keith Robles"
-__version__ = "Keith Robles"
+__version__ = "1.0.0"
 
 from bank_account import *
 from patterns.strategy.service_charge_strategy import ServiceChargeStrategy
