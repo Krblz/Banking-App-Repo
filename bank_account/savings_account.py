@@ -5,14 +5,12 @@ __version__ = "1.0.0"
 
 from datetime import date
 from bank_account.bank_account import BankAccount
+from patterns.strategy.minimum_balance_strategy import MinimumBalanceStrategy
 
 class SavingsAccount(BankAccount):
     """
     Savings Account Class extends from BankAccount
     """
-    
-    # Constant for Premium Charge
-    SERVICE_CHARGE_PREMIUM = 2.0
 
     def __init__(self, account_number: int, client_number: int,
                  balance: float, date_created: date,
@@ -26,10 +24,12 @@ class SavingsAccount(BankAccount):
         """
         super().__init__(account_number, client_number, balance, date_created)
 
-        if isinstance(minimum_balance, (float, int)):
-            self.__minimum_balance = float(minimum_balance)
-        else:
-            self.__minimum_balance = 50.00
+        # Directly Assigns Overdraft Values to Overdraft Strategy
+        # Changed from before to reduce code and redundancy
+        self.__strategy = MinimumBalanceStrategy(minimum_balance)
+
+        # Checking is done in strategy and then set as Attributes
+        self.__minimum_balance = self.__strategy.__minimum_balance
 
     def __str__(self) -> str:
         return (f"{super().__str__()} \n"
@@ -37,9 +37,8 @@ class SavingsAccount(BankAccount):
                 f"Account Type: Savings")
 
     def get_service_charges(self) -> float:
-        if (self._BankAccount__balance >= self.__minimum_balance):
-            service_charge = self.BASE_SERVICE_CHARGE
-        else:
-            service_charge = (self.BASE_SERVICE_CHARGE *
-                            self.SERVICE_CHARGE_PREMIUM)
-        return service_charge
+        """
+        returns:
+            float: value is calculated in MinimumBalanceStrategy then returned.
+        """
+        return self.__strategy.calculate_service_charges(self)

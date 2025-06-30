@@ -11,8 +11,6 @@ class BankAccount(ABC):
     Bank Account Class, represents the Client's Bank Account
     """
 
-    BASE_SERVICE_CHARGE = 0.5 # Float Constant
-
     def __init__(self, account_number: int, client_number: int, 
                  balance: float, date_created: date):
         """

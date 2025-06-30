@@ -5,6 +5,7 @@ __version__ = "1.0.0"
 
 from datetime import date, timedelta
 from bank_account.bank_account import BankAccount
+from patterns.strategy.management_fee_strategy import ManagementFeeStrategy
 
 class InvestmentAccount(BankAccount):
     """
@@ -26,10 +27,12 @@ class InvestmentAccount(BankAccount):
         """
         super().__init__(account_number, client_number, balance, date_created)
 
-        if isinstance(management_fee, (float, int)):
-            self.__management_fee = float(management_fee)
-        else:
-            self.__management_fee = 2.55
+        # Directly Assigns Overdraft Values to Overdraft Strategy
+        # Changed from before to reduce code and redundancy
+        self.__strategy = ManagementFeeStrategy(management_fee)
+
+        # Checking is done in strategy and then set as Attributes
+        self.__management_fee = self.__strategy.__management_fee
 
     def __str__(self) -> str:
         return (f"{super().__str__()} \n"
@@ -38,9 +41,8 @@ class InvestmentAccount(BankAccount):
                 f"Account Type: Investment")
 
     def get_service_charges(self) -> float:      
-        if (self._date_created < self.TEN_YEARS_AGO):
-            service_charge = self.BASE_SERVICE_CHARGE
-        else:
-            service_charge = (self.BASE_SERVICE_CHARGE +
-                            self.__management_fee)
-        return service_charge
+        """
+        returns:
+            float: value is calculated in ManagementFeeStrategy then returned.
+        """
+        return self.__strategy.calculate_service_charges(self)
