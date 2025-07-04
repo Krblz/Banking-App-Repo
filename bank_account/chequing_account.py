@@ -30,8 +30,8 @@ class ChequingAccount(BankAccount):
         self.__strategy = OverdraftStrategy(overdraft_limit, overdraft_rate)
 
         # Checking is done in strategy and then set as Attributes
-        self.__overdraft_limit = self.__strategy.__overdraft_limit
-        self.__overdraft_rate = self.__strategy.__overdraft_rate
+        self.__overdraft_limit = self.__strategy._OverdraftStrategy__overdraft_limit
+        self.__overdraft_rate = self.__strategy._OverdraftStrategy__overdraft_rate
 
     def __str__(self) -> str:
         return (f"{super().__str__()} \n"

@@ -29,7 +29,7 @@ class SavingsAccount(BankAccount):
         self.__strategy = MinimumBalanceStrategy(minimum_balance)
 
         # Checking is done in strategy and then set as Attributes
-        self.__minimum_balance = self.__strategy.__minimum_balance
+        self.__minimum_balance = self.__strategy._MinimumBalanceStrategy__minimum_balance
 
     def __str__(self) -> str:
         return (f"{super().__str__()} \n"

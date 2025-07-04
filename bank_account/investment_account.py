@@ -29,10 +29,10 @@ class InvestmentAccount(BankAccount):
 
         # Directly Assigns Overdraft Values to Overdraft Strategy
         # Changed from before to reduce code and redundancy
-        self.__strategy = ManagementFeeStrategy(management_fee)
+        self.__strategy = ManagementFeeStrategy(date_created, management_fee)
 
         # Checking is done in strategy and then set as Attributes
-        self.__management_fee = self.__strategy.__management_fee
+        self.__management_fee = self.__strategy._ManagementFeeStrategy__management_fee
 
     def __str__(self) -> str:
         return (f"{super().__str__()} \n"

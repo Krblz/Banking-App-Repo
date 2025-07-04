@@ -9,6 +9,7 @@ the following command:
 import unittest
 from datetime import date, timedelta
 from bank_account.investment_account import InvestmentAccount
+from patterns.strategy.service_charge_strategy import ServiceChargeStrategy
 
 class TestClient(unittest.TestCase):
 
@@ -17,7 +18,7 @@ class TestClient(unittest.TestCase):
         # provides initial values for the class attributes.
         self.investment_account  = InvestmentAccount(20025, 1, 0,
                                                      date(2012, 6, 6), 2.00)
-        self.BASE_SERVICE_CHARGE = self.investment_account.BASE_SERVICE_CHARGE
+        self.BASE_SERVICE_CHARGE = ServiceChargeStrategy.BASE_SERVICE_CHARGE
         
     def test_init_valid(self):
         # Arrange & Act
