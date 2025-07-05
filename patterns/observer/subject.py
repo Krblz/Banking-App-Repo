@@ -14,14 +14,16 @@ class Subject(Observer):
         notify: Method for giving an update via message
     """
     def __init__(self) -> None:
-        self.observers = []
+        self._observers = []
 
     def attach(self, observer: Observer) -> None:
-        self.observers.append(observer)
+        pass
 
     def detach(self, observer: Observer) -> None:
-        self.observers.remove(observer)
+        pass
 
     def notify(self, message: str) -> None:
-        for observer in self.observers:
-            observer.update(message)
+        pass
+
+    def update(self, message: str) -> None:
+        pass

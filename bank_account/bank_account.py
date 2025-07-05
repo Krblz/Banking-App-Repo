@@ -8,7 +8,7 @@ from abc import ABC, abstractmethod
 from patterns.observer.subject import Subject
 from patterns.observer.observer import Observer
 
-class BankAccount(ABC, Subject):
+class BankAccount(Subject, ABC):
     """
     Bank Account Class, represents the Client's Bank Account  
       
@@ -34,7 +34,7 @@ class BankAccount(ABC, Subject):
         raises:
             ValueError: If any of the arguments are invalid.
         """
-        super().__init__(observers)
+        super().__init__()
 
         if isinstance(account_number, int):
             self.__account_number = account_number
@@ -101,9 +101,10 @@ class BankAccount(ABC, Subject):
                        f"on account {self.__account_number}")
             self.notify(message)
         
-        if self.__balance > self.LARGE_TRANSACTION_THRESHOLD:
-            message = (f"Large transaction ${self.__balance:,.2f}: "
+        if amount > self.LARGE_TRANSACTION_THRESHOLD:
+            message = (f"Large transaction ${amount:,.2f}: "
                        f"on account {self.__account_number}")
+            self.notify(message)
 
     def deposit(self, amount: float) -> None:
         """
@@ -155,13 +156,13 @@ class BankAccount(ABC, Subject):
         pass
 
     def attach(self, observer: Observer) -> None:
-        self.observers.append(observer)
+        self._observers.append(observer)
     
     def detach(self, observer: Observer) -> None:
-        if observer in self.observers:
-            self.observers.remove(observer)
+        if observer in self._observers:
+            self._observers.remove(observer)
     
     def notify(self, message: str) -> None:
-        for observer in self.observers:
+        for observer in self._observers:
             observer.update(message)
     
