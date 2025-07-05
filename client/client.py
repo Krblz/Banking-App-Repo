@@ -4,10 +4,13 @@ __author__ = "Keith Robles"
 __version__ = "1.0.0"
 
 from email_validator import validate_email, EmailNotValidError
+from patterns.observer.observer import Observer
+from utility.file_utils import simulate_send_email
+from datetime import date, datetime
 
-class Client:
+class Client(Observer):
     """
-    Client Class, represents the Client
+    Client Class, represents the Client and inherits from the Observer Class
     """
     def __init__(self, client_number: int, first_name: str, last_name: str,
                  email_address: str):
@@ -84,3 +87,10 @@ class Client:
         """
         return (f"{self.__last_name}, {self.__first_name}"
                 f" [{self.__client_number}] - {self.__email_address}")
+    
+    def update(self, message: str) -> None:
+        subject = f"ALERT: Unusual Activity: {date.today()}/{datetime.now()}"
+        message = (f"Notification for {self.__client_number}: "
+                   f"{self.__first_name} {self.__last_name}: "
+                   f"{message}")
+        simulate_send_email(self.__email_address, subject, message)

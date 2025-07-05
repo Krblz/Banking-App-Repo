@@ -5,11 +5,19 @@ __version__ = "1.1.1"
 
 from datetime import date
 from abc import ABC, abstractmethod
+from patterns.observer.subject import Subject
+from patterns.observer.observer import Observer
 
-class BankAccount(ABC):
+class BankAccount(ABC, Subject):
     """
-    Bank Account Class, represents the Client's Bank Account
+    Bank Account Class, represents the Client's Bank Account  
+      
+    constants:
+        LARGE_TRANSACTION_THRESHOLD (float): determines the maximum transaction 
+        LOW_BALANCE_LEVEL (float):  determines the low balance level
     """
+    LARGE_TRANSACTION_THRESHOLD = 9999.99 
+    LOW_BALANCE_LEVEL = 50.0 
 
     def __init__(self, account_number: int, client_number: int, 
                  balance: float, date_created: date):
@@ -26,6 +34,7 @@ class BankAccount(ABC):
         raises:
             ValueError: If any of the arguments are invalid.
         """
+        super().__init__(observers)
 
         if isinstance(account_number, int):
             self.__account_number = account_number
@@ -86,6 +95,15 @@ class BankAccount(ABC):
         """
         if isinstance(amount, (float, int)):
             self.__balance += float(amount)
+        
+        if self.__balance < self.LOW_BALANCE_LEVEL:
+            message = (f"Low balance warning ${self.__balance:,.2f}: "
+                       f"on account {self.__account_number}")
+            self.notify(message)
+        
+        if self.__balance > self.LARGE_TRANSACTION_THRESHOLD:
+            message = (f"Large transaction ${self.__balance:,.2f}: "
+                       f"on account {self.__account_number}")
 
     def deposit(self, amount: float) -> None:
         """
@@ -136,3 +154,14 @@ class BankAccount(ABC):
     def get_service_charges(self) -> float:
         pass
 
+    def attach(self, observer: Observer) -> None:
+        self.observers.append(observer)
+    
+    def detach(self, observer: Observer) -> None:
+        if observer in self.observers:
+            self.observers.remove(observer)
+    
+    def notify(self, message: str) -> None:
+        for observer in self.observers:
+            observer.update(message)
+    
