@@ -1,7 +1,7 @@
 """"This Module defines the Client class"""
 
 __author__ = "Keith Robles"
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 from email_validator import validate_email, EmailNotValidError
 from patterns.observer.observer import Observer

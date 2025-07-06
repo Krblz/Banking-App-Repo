@@ -32,3 +32,9 @@ while also allowing BankAccount Class to change between Strategies without chang
 The Variables required also being contained in the Strategies allow for easy modification of the Code without drastic changes  
 to the BankAccount Classes.
 
+## Observer Pattern
+Observer Pattern is used in BankAccount and Client, BankAccount to Allow itself to be Observed and Client to be  
+notified when the BankAccount triggers the Observer. But first, the Client Instance must first be attached to   
+the BankAccount, this allows the Client to be notified when the balance is updated that triggers the Observer. 
+When Triggered, a txt file in the Output Folder shows the Message that would've been sent to the Email of the Client  
+that is attached to a BankAccount.
