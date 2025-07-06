@@ -27,8 +27,8 @@ respective instances created during the program's runtime.
 
 ## Strategy Pattern
 Strategy Pattern is used by changing the functionality within of the Child Classes of the BankAccount Classes  
-and making it run in the ServiceChargeStrategy Child Classes. This allows for easier implementation of new BankAccount Classes
-while also allowing BankAccount Class to change between Strategies without changing much of the Code.  
+and making it run in the ServiceChargeStrategy Child Classes. This allows for easier implementation of new BankAccount   
+Classes while also allowing BankAccount Class to change between Strategies without changing much of the Code.  
 The Variables required also being contained in the Strategies allow for easy modification of the Code without drastic changes  
 to the BankAccount Classes.
 
