@@ -10,6 +10,8 @@ sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 import csv
 from datetime import datetime
 import logging
+from client.client import Client
+from bank_account import * 
 
 # *******************************************************************************
 # GIVEN LOGGING AND FILE ACCESS CODE
@@ -44,10 +46,6 @@ accounts_csv_path = os.path.join(data_dir, 'accounts.csv')
 # *******************************************************************************
 
 
-
-
-
-
 def load_data()->tuple[dict,dict]:
     """
     Populates a client dictionary and an account dictionary with 
@@ -59,16 +57,61 @@ def load_data()->tuple[dict,dict]:
     accounts = {}
 
     # READ CLIENT DATA 
-    with open(clients_csv_path, newline='') as csvfile:
+    with open(clients_csv_path, mode='r', newline='') as csvfile:
         reader = csv.DictReader(csvfile)
-        
+        for row in reader:
+            try:
+                client_listing.update({row['client_number']:
+                    Client(row['client_number'],row['first_name'],
+                        row['last_name'],row['email_address'])})
+            except ValueError as e:
+                error_m = "Unable to create client: "
+                logging.exception(error_m, e)
 
     # READ ACCOUNT DATA
-    with open(accounts_csv_path, newline='') as csvfile:
-        reader = csv.DictReader(csvfile)  
-
+    with open(accounts_csv_path, newline=',') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            try:
+                if row['client_number'] in client_listing:
+                    if row['account_type'] is 'ChequingAccount':
+                        accounts.update({row['account_number']:
+                            ChequingAccount(row['account_number'],
+                                            row['client_number'],
+                                            row['balance'],
+                                            row['date_created'],
+                                            row['overdraft_limit'],
+                                            row['overdraft_rate']
+                        )})
+                    if row['account_type'] is 'InvestmentAccount':
+                        accounts.update({row['account_number']:
+                            InvestmentAccount(row['account_number'],
+                                            row['client_number'],
+                                            row['balance'],
+                                            row['date_created'],
+                                            row['management_fee']
+                        )})
+                    if row['account_type'] is 'SavingsAccount':
+                        accounts.update({row['account_number']:
+                            SavingsAccount(row['account_number'],
+                                            row['client_number'],
+                                            row['balance'],
+                                            row['date_created'],
+                                            row['minimum_balance']
+                        )})
+                    else:
+                        raise ValueError("Not a valid account type")
+                else:
+                    raise ValueError ("Bank Account: "
+                        f"{row['account_number']} contains invalid"
+                        f"Client Number: {row['client_number']}")
+                
+            except ValueError as e:
+                error_m = "Unable to create bank account: "
+                logging.exception(error_m, e)
+        
     # RETURN STATEMENT
-    
+    return client_listing, accounts
 
 
 def update_data(updated_account: BankAccount) -> None:
