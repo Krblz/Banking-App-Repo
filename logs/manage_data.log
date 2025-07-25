@@ -1,421 +1,207 @@
-root - ERROR - ('Unable to create client: ', ValueError('First Name cannot be blank'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 66, in load_data
-    Client(client_number,row['first_name'],
-    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        row['last_name'],row['email_address'])})
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\client\client.py", line 37, in __init__
-    raise ValueError("First Name cannot be blank")
-ValueError: First Name cannot be blank
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError("could not convert string to float: 'ten'"))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 80, in load_data
-    balance = float(row['balance'])
-ValueError: could not convert string to float: 'ten'
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Not a valid account type'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 108, in load_data
-    raise ValueError("Not a valid account type")
-ValueError: Not a valid account type
-root - ERROR - ('Unable to create bank account: ', ValueError('Bank Account: 20100 contains invalidClient Number: 9999'))
-
-Traceback (most recent call last):
-  File "c:\Users\keith\OneDrive\Documents\.RRC\ISD\project\isd-assignment-1\user_interface\manage_data.py", line 110, in load_data
-    raise ValueError ("Bank Account: "
-        f"{row['account_number']} contains invalid"
-        f"Client Number: {row['client_number']}")
-ValueError: Bank Account: 20100 contains invalidClient Number: 9999
+root - ERROR - Unable to create client: First Name cannot be blank
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - could not convert string to float: 'ten'
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Unable to create bank account: Not a valid account type
+
+
+root - ERROR - Bank Account: 20100 contains invalid Client Number: 9999
+
+

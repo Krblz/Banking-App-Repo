@@ -66,8 +66,8 @@ def load_data()->tuple[dict,dict]:
                     Client(client_number,row['first_name'],
                         row['last_name'],row['email_address'])})
             except ValueError as e:
-                error_m = "Unable to create client: ", e
-                logging.exception(error_m)
+                error_m = "Unable to create client: " + str(e)
+                logging.error(error_m)
 
     # READ ACCOUNT DATA
     with open(accounts_csv_path, mode='r', newline='') as csvfile:
@@ -79,41 +79,45 @@ def load_data()->tuple[dict,dict]:
                 client_number = int(row['client_number'])
                 balance = float(row['balance'])
                 if client_number in client_listing:
-                    if row['account_type'] == 'ChequingAccount':
-                        accounts.update({account_number:
-                            ChequingAccount(account_number,
-                                            client_number,
-                                            balance,
-                                            row['date_created'],
-                                            float(row['overdraft_limit']),
-                                            float(row['overdraft_rate'])
-                        )})
-                    if row['account_type'] == 'InvestmentAccount':
-                        accounts.update({account_number:
-                            InvestmentAccount(account_number,
-                                            client_number,
-                                            balance,
-                                            row['date_created'],
-                                            float(row['management_fee'])
-                        )})
-                    if row['account_type'] == 'SavingsAccount':
-                        accounts.update({account_number:
-                            SavingsAccount(account_number,
-                                            client_number,
-                                            balance,
-                                            row['date_created'],
-                                            float(row['minimum_balance'])
-                        )})
-                    else:
-                        raise ValueError("Not a valid account type")
+                    try:
+                        if row['account_type'] == 'ChequingAccount':
+                            accounts.update({account_number:
+                                ChequingAccount(account_number,
+                                                client_number,
+                                                balance,
+                                                row['date_created'],
+                                                float(row['overdraft_limit']),
+                                                float(row['overdraft_rate'])
+                            )})
+                        if row['account_type'] == 'InvestmentAccount':
+                            accounts.update({account_number:
+                                InvestmentAccount(account_number,
+                                                client_number,
+                                                balance,
+                                                row['date_created'],
+                                                float(row['management_fee'])
+                            )})
+                        if row['account_type'] == 'SavingsAccount':
+                            accounts.update({account_number:
+                                SavingsAccount(account_number,
+                                                client_number,
+                                                balance,
+                                                row['date_created'],
+                                                float(row['minimum_balance'])
+                            )})
+                        else:
+                            raise ValueError("Not a valid account type")
+                    except ValueError as e:
+                        error_m = "Unable to create bank account: " + str(e)
+                        logging.error(error_m)
                 else:
                     raise ValueError ("Bank Account: "
-                        f"{row['account_number']} contains invalid"
-                        f"Client Number: {row['client_number']}")
-                
+                        f"{account_number} contains invalid "
+                        f"Client Number: {client_number}")
+                      
             except ValueError as e:
-                error_m = "Unable to create bank account: ", e
-                logging.exception(error_m)
+                logging.error(str(e))
+                
         
     # RETURN STATEMENT
     return client_listing, accounts
