@@ -78,6 +78,7 @@ def load_data()->tuple[dict,dict]:
                 account_number = int(row['account_number'])
                 client_number = int(row['client_number'])
                 balance = float(row['balance'])
+                date_created = datetime.strptime(row['date_created'], "%Y-%m-%d")
                 if client_number in client_listing:
                     try:
                         if row['account_type'] == 'ChequingAccount':
@@ -85,7 +86,7 @@ def load_data()->tuple[dict,dict]:
                                 ChequingAccount(account_number,
                                                 client_number,
                                                 balance,
-                                                row['date_created'],
+                                                date_created,
                                                 float(row['overdraft_limit']),
                                                 float(row['overdraft_rate'])
                             )})
@@ -94,7 +95,7 @@ def load_data()->tuple[dict,dict]:
                                 InvestmentAccount(account_number,
                                                 client_number,
                                                 balance,
-                                                row['date_created'],
+                                                date_created,
                                                 float(row['management_fee'])
                             )})
                         if row['account_type'] == 'SavingsAccount':
@@ -102,7 +103,7 @@ def load_data()->tuple[dict,dict]:
                                 SavingsAccount(account_number,
                                                 client_number,
                                                 balance,
-                                                row['date_created'],
+                                                date_created,
                                                 float(row['minimum_balance'])
                             )})
                         else:
