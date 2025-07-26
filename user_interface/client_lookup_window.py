@@ -27,12 +27,12 @@ class ClientLookupWindow(LookupWindow):
         self.__accounts = data[1]
 
         # Signals
-        self.lookup_button.clicked.connect(self.on_lookup_client)
-        #self.client_number_edit.textChanged.connect(self.on_text_changed)
-        #self.account_table.cellClicked.connect(self.on_select_account)
+        self.lookup_button.clicked.connect(self.__on_lookup_client)
+        self.client_number_edit.textChanged.connect(self.__on_text_changed)
+        self.account_table.cellClicked.connect(self.__on_select_account)
 
     @Slot()
-    def on_lookup_client(self) -> None:
+    def __on_lookup_client(self) -> None:
         # Obtains Client Information
         try:
             client_number = int(self.client_number_edit.text())
@@ -70,7 +70,7 @@ class ClientLookupWindow(LookupWindow):
                 bal_item = QTableWidgetItem(balance)
                 date_created = str(account._date_created)
                 d_created_item = QTableWidgetItem(date_created)
-                account_type = str(account.__class__.__name__)
+                account_type = str(account.__class__.__name__) # Checks for the BankAccount Classes
                 acc_type_item = QTableWidgetItem(account_type)
                 # Sets the Item Contents
                 self.account_table.setItem(row_position, 0, acc_num_item)
@@ -80,3 +80,29 @@ class ClientLookupWindow(LookupWindow):
                 # Resizes the Columns to fit contents
                 self.account_table.resizeColumnsToContents()
     
+    @Slot()
+    def __on_text_changed(self) -> None:
+        self.account_table.setRowCount(0)
+
+    @Slot(int, int)
+    def __on_select_account(self, row: int, column: int) -> None:
+        if self.account_table.item(row, 0) is not None:
+            account_number = int(self.account_table.item(row, 0).text())
+            if account_number in self.__accounts:
+                bank_account = self.__accounts[account_number].__class__.__name__
+                account_details = AccountDetailsWindow(bank_account)
+                account_details.exec_()
+            else:
+                result = QMessageBox.information(self, "No Bank Account",
+                                             "Bank Account selected does not exist",
+                                             QMessageBox.Ok)
+                if result == QMessageBox.Ok:
+                    self.reset_display()
+                    return
+        else:
+            result = QMessageBox.information(self, "Invalid Selection",
+                                             "Please select a valid record.",
+                                             QMessageBox.Ok)
+            if result == QMessageBox.Ok:
+                self.reset_display()
+                return
