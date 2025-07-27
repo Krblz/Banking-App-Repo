@@ -21,3 +21,19 @@ class AccountDetailsWindow(DetailsWindow):
             None
         """
         super().__init__()
+        if isinstance(account, BankAccount):
+            self.__account = copy.copy(account)
+            self.account_number_label.setText(str(self.__account.account_number))
+            self.balance_label.setText(str(self.__account.balance))
+
+            self.deposit_button.clicked.connect(self.__on_apply_transaction)
+            self.withdraw_button.clicked.connect(self.__on_apply_transaction)
+            self.exit_button.clicked.connect(self.__on_exit)
+        else:
+            self.close()
+        
+    def __on_apply_transaction(self):
+        pass
+
+    def __on_exit(self):
+        pass

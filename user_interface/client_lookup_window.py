@@ -89,7 +89,7 @@ class ClientLookupWindow(LookupWindow):
         if self.account_table.item(row, 0) is not None:
             account_number = int(self.account_table.item(row, 0).text())
             if account_number in self.__accounts:
-                bank_account = self.__accounts[account_number].__class__.__name__
+                bank_account = self.__accounts[account_number]
                 account_details = AccountDetailsWindow(bank_account)
                 account_details.exec_()
             else:
