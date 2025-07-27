@@ -38,4 +38,11 @@ Observer Pattern is used in BankAccount and Client, BankAccount to Allow itself 
 notified when the BankAccount triggers the Observer. But first, the Client Instance must first be attached to   
 the BankAccount, this allows the Client to be notified when the balance is updated that triggers the Observer. 
 When Triggered, a txt file in the Output Folder shows the Message that would've been sent to the Email of the Client  
-that is attached to a BankAccount.
+that is attached to a BankAccount.  
+  
+## Event-Driven Programming Paradigm  
+The Event-Driven Programming Paradigm is used here to add a functioning User Interface for Clients. There are  
+multiple events used ranging from interface buttons to update signals. Event Handlers are connected to events.  
+In this application, an example is the Look Up Client Button that sends a Signal to look up the inputted client  
+and depending on the user's input, will trigger methods and their functions. Some Events are also based on internal  
+updates like the balance update that only triggers when the balance is updated via a transaction done in the interface.  
