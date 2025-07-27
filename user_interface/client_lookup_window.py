@@ -34,7 +34,7 @@ class ClientLookupWindow(LookupWindow):
     @Slot()
     def __on_lookup_client(self) -> None:
         # Obtains Client Information
-        try:
+        try: 
             client_number = int(self.client_number_edit.text())
         except ValueError:
             result = QMessageBox.information(self, "Input Error", 
@@ -45,7 +45,7 @@ class ClientLookupWindow(LookupWindow):
                 return
         try:
             client = self.__client_listing[client_number]
-        except KeyError:
+        except KeyError: 
             result = QMessageBox.information(self, "Not Found",
                                              "Client number: " +
                                              f"{client_number} not found.",
@@ -91,6 +91,7 @@ class ClientLookupWindow(LookupWindow):
             if account_number in self.__accounts:
                 bank_account = self.__accounts[account_number]
                 account_details = AccountDetailsWindow(bank_account)
+                account_details.balance_updated.connect(self.__update_data)
                 account_details.exec_()
             else:
                 result = QMessageBox.information(self, "No Bank Account",
@@ -106,3 +107,16 @@ class ClientLookupWindow(LookupWindow):
             if result == QMessageBox.Ok:
                 self.reset_display()
                 return
+
+    @Slot(BankAccount)        
+    def __update_data(self, account: BankAccount) -> None:
+        for row in range(self.account_table.rowCount()):
+            target_acc_num = account.account_number              # Target Account Number
+            curr_acc_num = int(self.account_table.item(row, 0).text())  # Current Account Number in Row
+            if target_acc_num == curr_acc_num:
+                balance = str(account.balance)
+                bal_item = QTableWidgetItem(balance)
+                self.account_table.setItem(row, 1, bal_item)
+                self.__accounts[target_acc_num]._balance = account.balance
+                update_data(account)
+
