@@ -13,7 +13,7 @@ class AccountDetailsWindow(DetailsWindow):
     A class used to display account details and perform bank account transactions.
     """
 
-    # Signals
+    # Signal for Balance Update
     balance_updated = Signal(BankAccount)
 
     def __init__(self, account: BankAccount) -> None:
