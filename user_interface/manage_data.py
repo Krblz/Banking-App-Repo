@@ -79,6 +79,7 @@ def load_data()->tuple[dict,dict]:
                 client_number = int(row['client_number'])
                 balance = float(row['balance'])
                 date_created = datetime.strptime(row['date_created'], "%Y-%m-%d")
+                date_created = date_created.date()
                 if client_number in client_listing:
                     try:
                         if row['account_type'] == 'ChequingAccount':
