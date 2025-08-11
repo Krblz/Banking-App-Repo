@@ -47,3 +47,4 @@ multiple events used ranging from interface buttons to update signals. Event Han
 In this application, an example is the Look Up Client Button that sends a Signal to look up the inputted client  
 and depending on the user's input, will trigger methods and their functions. Some Events are also based on internal  
 updates like the balance update that only triggers when the balance is updated via a transaction done in the interface.  
+
