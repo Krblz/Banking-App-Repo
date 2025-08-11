@@ -89,6 +89,9 @@ class Client(Observer):
                 f" [{self.__client_number}] - {self.__email_address}")
     
     def update(self, message: str) -> None:
+        """
+        Creates and Sends a Notification to the Client.
+        """
         subject = f"ALERT: Unusual Activity: {date.today()}/{datetime.now()}"
         message = (f"Notification for {self.__client_number}: "
                    f"{self.__first_name} {self.__last_name}: "

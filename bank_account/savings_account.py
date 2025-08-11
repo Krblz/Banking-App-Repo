@@ -32,6 +32,9 @@ class SavingsAccount(BankAccount):
         self.__minimum_balance = self.__strategy._MinimumBalanceStrategy__minimum_balance
 
     def __str__(self) -> str:
+        """
+        Method for Printing the Class as a String
+        """
         return (f"{super().__str__()} \n"
                 f"Minimum Balance: ${self.__minimum_balance:,.2f} "
                 f"Account Type: Savings")

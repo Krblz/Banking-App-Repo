@@ -35,6 +35,9 @@ class InvestmentAccount(BankAccount):
         self.__management_fee = self.__strategy._ManagementFeeStrategy__management_fee
 
     def __str__(self) -> str:
+        """
+        Method for Printing the Class as a String
+        """
         return (f"{super().__str__()} \n"
                 f"Date Created: {self._date_created} "
                 f"Management Fee: ${self.__management_fee:,.2f} "

@@ -34,6 +34,9 @@ class ClientLookupWindow(LookupWindow):
 
     @Slot()
     def __on_lookup_client(self) -> None:
+        """
+        Searches for the Client Number Inputted in the Text above Lookup Client.
+        """
         # Obtains Client Information
         self.__toggle_filter(False)
         try: 
@@ -84,10 +87,18 @@ class ClientLookupWindow(LookupWindow):
     
     @Slot()
     def __on_text_changed(self) -> None:
+        """
+        Resets the Account Table.
+        """
         self.account_table.setRowCount(0)
 
     @Slot(int, int)
     def __on_select_account(self, row: int, column: int) -> None:
+        """
+        Method for when an account is selected.
+
+        Allows for Transactions.
+        """
         if self.account_table.item(row, 0) is not None:
             account_number = int(self.account_table.item(row, 0).text())
             if account_number in self.__accounts:
@@ -112,6 +123,9 @@ class ClientLookupWindow(LookupWindow):
 
     @Slot(BankAccount)        
     def __update_data(self, account: BankAccount) -> None:
+        """
+        Updates the Data of the Account Table.
+        """
         for row in range(self.account_table.rowCount()):
             target_acc_num = account.account_number              # Target Account Number
             curr_acc_num = int(self.account_table.item(row, 0).text())  # Current Account Number in Row
@@ -124,7 +138,7 @@ class ClientLookupWindow(LookupWindow):
 
     @Slot()
     def __on_filter_clicked(self) -> None:
-        '''
+        """
         Method when Filter Button is clicked.
 
         Filter_target is the currentIndex in the Combo Box.
@@ -136,7 +150,7 @@ class ClientLookupWindow(LookupWindow):
         2 = Date Created
         3 = Account Type
         If more are added in the combo box, it will automatically be filtered.
-        '''
+        """
         if self.filter_button.text() == "Apply Filter":
             filter_target = self.filter_combo_box.currentIndex()
             filter_item = self.filter_edit.text()
@@ -148,6 +162,9 @@ class ClientLookupWindow(LookupWindow):
             self.__toggle_filter(False)
 
     def __toggle_filter(self, filter_on: bool) -> None:
+        """
+        Toggles Filter Button between Enabled and Disabled States.
+        """
         self.filter_button.setEnabled(True)
         if filter_on is True:
             self.filter_button.setText("Reset")

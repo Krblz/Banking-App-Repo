@@ -156,13 +156,22 @@ class BankAccount(Subject, ABC):
         pass
 
     def attach(self, observer: Observer) -> None:
+        """
+        Attaches BankAccount to Observer.
+        """
         self._observers.append(observer)
     
     def detach(self, observer: Observer) -> None:
+        """
+        Detaches BankAccount to Observer.
+        """
         if observer in self._observers:
             self._observers.remove(observer)
     
     def notify(self, message: str) -> None:
+        """
+        Sends Message to Observer.
+        """
         for observer in self._observers:
             observer.update(message)
     

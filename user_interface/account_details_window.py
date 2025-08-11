@@ -38,6 +38,9 @@ class AccountDetailsWindow(DetailsWindow):
 
     @Slot()
     def __on_apply_transaction(self):
+        """
+        Applies Transaction.
+        """
         try: # Attempts to converts Transaction Amount Edit to Float
             transaction_amount = float(self.transaction_amount_edit.text())
         except ValueError: # When Attempt fails
@@ -70,4 +73,7 @@ class AccountDetailsWindow(DetailsWindow):
 
     @Slot()
     def __on_exit(self):
+        """
+        Exits the Details WIndow.
+        """
         self.close()
