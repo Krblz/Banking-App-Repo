@@ -48,3 +48,12 @@ In this application, an example is the Look Up Client Button that sends a Signal
 and depending on the user's input, will trigger methods and their functions. Some Events are also based on internal  
 updates like the balance update that only triggers when the balance is updated via a transaction done in the interface.  
 
+## Filtering
+Filterig was incorporated in this application using a for-loop that searches for the  
+variable inputted via the Combo Box's Type Selection and Filter's Text Box for  
+designating what the User is looking for. When Apply Filter is clicked a signal is sent  
+which runs the method on_clicked_filter to filter out the unwanted information by hiding  
+them and swapping the Apply Filter into a Reset for when the User wants to Filter for   
+other data. 
+Filtering in this Application doesn't using the in-built FIlter Method but instead  
+a for-loop and if-else statements to filter out unwanted information.
